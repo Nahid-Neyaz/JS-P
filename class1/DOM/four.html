@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mingo</title>
+</head>
+<body>
+    <ul class="language">
+        <li>JAVASCRIPT</li>
+    </ul>
+    
+</body>
+<script>
+    function addL(langname){
+      const li= document.createElement('li')
+      li.innerHTML = `${langname}`
+      document.querySelector('.language').appendChild(li)
+    
+    }
+    addL("JAVA")
+    addL("RUBY")
+    addL("CSS")
+
+    function addOptiL(langname){
+       const li=document.createElement('li') 
+       li.appendChild(document.createTextNode(langname))
+       document.querySelector('.language').appendChild(li)
+    }
+    addOptiL('HTML')
+
+
+    ///EDIT
+
+    const secondLang = document.querySelector("li:nth-child(2)")
+    //secondLang.innerHTML = "Mingo"
+    const newli= document.createElement('li')
+    newli.textContent = "Mingo"
+    secondLang.replaceWith(newli)
+
+    //EDIT II
+
+    const flang= document.querySelector("li:first-child")
+    //flang.outerHTML = '<li> react </li>'
+    const newlli= document.createElement('li')
+    newlli.textContent ="hippo"
+    flang.replaceWith(newlli)
+
+    //REMOVE
+    const lastl = document.querySelector('li:last-child')
+    lastl.remove()
+
+
+</script>
+</html>
