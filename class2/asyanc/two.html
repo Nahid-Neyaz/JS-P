@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello Hippo</h1>
+    <button id="stop">Stop</button>
+</body>
+<script> 
+const hi=function(){
+    console.log("MINGO")
+}
+const chatxt = function(){
+document.querySelector('h1').innerHTML="HIPPO"
+}
+const chng=setTimeout(chatxt,2000)
+
+//clearTimeout(chng)
+
+document.querySelector('#stop').addEventListener('click',function(){
+    clearTimeout(chng)
+    console.log("STOPPED")
+})
+</script>
+</html>
