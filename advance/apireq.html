@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: black; color: antiquewhite; font-size: larger;">
+    <a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/readyState">link for the ready state doc</a>
+</body>
+<script>
+    const rurl='https://api.github.com/users/hiteshchoudhary'
+    //XML object ->pehle se states hote hai 
+    const X= new XMLHttpRequest()// new method bnta hai 
+    X.open('GET',rurl)
+    // 2 parameters.
+    X.onreadystatechange= function(){
+        console.log(X.readyState)
+        if(X.readyState === 4){
+            const data = JSON.parse(this.responseText)
+            //response url se string data type pe aata hai 
+            console.log(data.type)
+            console.log(data.followers)
+        }
+
+    }
+    
+    X.send();
+</script>
+</html>
